@@ -1,0 +1,24 @@
+{
+  "name": "shoppr",
+  "version": "0.1.0",
+  "description": "Shoppr - My first attempt at creating a (MERN) full-stack e-commerce web application",
+  "main": "server/index.js",
+  "type": "module",
+  "license": "MIT",
+  "author": {
+    "name": "Benyamin Sajedi Fard",
+    "email": "ben.8108.1611@gmail.com"
+  },
+  "scripts": {
+    "dev": "concurrently \"npm:dev:*\"",
+    "dev:client": "npm --prefix client run dev",
+    "dev:server": "npm --prefix server run dev",
+    "build": "npm run build:client && npm run build:server",
+    "build:client": "npm --prefix client run build",
+    "build:server": "npm --prefix server run build",
+    "start": "node server/index.js"
+  },
+  "dependencies": {
+    "concurrently": "^9.2.0"
+  }
+}

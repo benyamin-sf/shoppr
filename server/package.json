@@ -1,0 +1,43 @@
+{
+  "name": "shoppr-server",
+  "version": "0.1.0",
+  "description": "Shoppr e-commerce server repo",
+  "main": "index.js",
+  "type": "module",
+  "author": {
+    "name": "Benyamin Sajedi Fard",
+    "email": "ben.8108.1611@gmail.com"
+  },
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "build": "echo 'build not needed for server'",
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "compression": "^1.8.1",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dayjs": "^1.11.13",
+    "dotenv": "^17.2.0",
+    "express": "^4.21.2",
+    "express-async-errors": "^3.1.1",
+    "express-mongo-sanitize": "^2.2.0",
+    "express-rate-limit": "^8.0.1",
+    "express-validator": "^7.2.1",
+    "helmet": "^8.1.0",
+    "http-status-codes": "^2.3.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.16.4",
+    "morgan": "^1.10.1",
+    "multer": "^2.0.2",
+    "uuid": "^11.1.0",
+    "xss-clean": "^0.1.4"
+  },
+  "devDependencies": {
+    "eslint": "^9.31.0",
+    "nodemon": "^3.1.10",
+    "prettier": "^3.6.2"
+  }
+}
