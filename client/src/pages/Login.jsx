@@ -6,7 +6,7 @@ export default function Login() {
   const { state } = useNavigation();
 
   return (
-    <section className='h-screen grid place-items-center'>
+    <section className='min-h-screen grid place-items-center py-16 px-4'>
       <Form
         method='POST'
         className='card w-96 p-8 bg-base-100 shadow-lg flex flex-col gap-y-4'
