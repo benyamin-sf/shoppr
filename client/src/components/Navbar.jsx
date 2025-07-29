@@ -29,7 +29,7 @@ export default function Navbar() {
   }, [theme]);
 
   return (
-    <nav className='bg-base-200'>
+    <nav className='navbar bg-base-200'>
       <div className='navbar centered'>
         <div className='navbar-start'>
           {/* LOGO */}

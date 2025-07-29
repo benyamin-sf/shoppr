@@ -7,4 +7,8 @@
   .centered {
     @apply mx-auto max-w-6xl px-2 sm:px-4 md:px-8;
   }
+
+  .navbar .active {
+    @apply bg-base-300;
+  }
 }
