@@ -1,4 +1,10 @@
 @import 'tailwindcss';
 @plugin "daisyui" {
-  themes: light --default, dark --prefersdark, cupcake;
+  themes: corporate --default, business --prefersdark;
+}
+
+@layer components {
+  .centered {
+    @apply mx-auto max-w-6xl px-2 sm:px-4 md:px-8;
+  }
 }
