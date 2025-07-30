@@ -35,23 +35,25 @@ export default function Navbar() {
           {/* LOGO */}
           <NavLink
             to='/'
-            className='hidden lg:flex btn btn-primary text-3xl items-center'
+            className='hidden w-12 h-12 lg:flex btn btn-primary text-3xl items-center'
           >
             S
           </NavLink>
+
           {/* DROPDOWN */}
           <div className='dropdown'>
             <label tabIndex={0} className='btn btn-ghost lg:hidden'>
               <FaBarsStaggered className='h-6 w-6' />
             </label>
-            <ul className='menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-200 rounded-box w-48'>
+
+            <ul className='menu menu-sm dropdown-content mt-8 z-[1] p-2 shadow bg-base-200 rounded-box w-48 space-y-1'>
               <NavLinks />
             </ul>
           </div>
         </div>
 
         <div className='navbar-center hidden lg:flex'>
-          <ul className='menu menu-horizontal'>
+          <ul className='menu menu-horizontal space-x-1'>
             <NavLinks />
           </ul>
         </div>

@@ -7,13 +7,18 @@ import {
   Checkout,
   Error,
   HomeLayout,
-  Landing,
   Login,
   Orders,
   Product,
   Products,
   Register,
 } from './pages';
+
+// FEATURES
+import { Landing, LandingFallback, landingLoader } from './features/Landing';
+
+// COMPONENTS
+import { ErrorElement } from './components';
 
 const router = createBrowserRouter([
   {
@@ -24,6 +29,9 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Landing />,
+        hydrateFallbackElement: <LandingFallback />,
+        loader: landingLoader,
+        errorElement: <ErrorElement />,
       },
       {
         path: 'about',

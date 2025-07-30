@@ -7,7 +7,7 @@ export default function HomeLayout() {
     <main id='main'>
       <TopHeader />
       <Navbar />
-      <section className='centered'>
+      <section className='centered py-8 sm:py-10 md:py-12 lg:py-14 xl:py-16 2xl:py-20'>
         <Outlet />
       </section>
     </main>
