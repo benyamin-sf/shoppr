@@ -1,0 +1,19 @@
+### GET ALL PRODUCTS (public)
+GET /api/products HTTP/1.1
+Host: strapi-store-server.onrender.com
+
+### GET FEATURED PRODUCTS (public)
+GET /api/products?featured=true HTTP/1.1
+Host: strapi-store-server.onrender.com
+
+### GET SINGLE PRODUCT (public)
+GET /api/products/19 HTTP/1.1
+Host: strapi-store-server.onrender.com
+
+### FILTER PRODUCTS (public)
+GET /api/products?search=s&category=all&company=all&order=a-z&price=100000&shipping=true HTTP/1.1
+Host: strapi-store-server.onrender.com
+
+### ALL PRODUCTS WITH PAGINATION (public)
+GET /api/products?page=1 HTTP/1.1
+Host: strapi-store-server.onrender.com

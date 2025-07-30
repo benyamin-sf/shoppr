@@ -6,8 +6,12 @@ const orderSchema = new mongoose.Schema(
     items: [
       {
         product: { type: mongoose.Schema.Types.ObjectId, ref: 'Product' },
-        quantity: Number,
+        seller: { type: mongoose.Schema.Types.ObjectId, ref: 'Seller' },
+        title: String,
+        thumbnail: String,
         price: Number,
+        quantity: Number,
+        color: String,
       },
     ],
     shippingAddress: AddressSchema,

@@ -8,6 +8,13 @@ const productSchema = new mongoose.Schema(
     price: Number,
     stock: Number,
     images: [String],
+    colors: {
+      type: [String],
+      required: [
+        true,
+        "at least 'one' color should be defined for the product.",
+      ],
+    },
     category: { type: mongoose.Schema.Types.ObjectId, ref: 'Category' },
     rating: Number,
     numReviews: Number,

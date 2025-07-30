@@ -1,0 +1,30 @@
+### ADD ORDER (auth)
+POST /api/orders HTTP/1.1
+Host: strapi-store-server.onrender.com
+Content-Type: application/json
+
+{
+    "data": {
+        "address": "Florida, US",
+        "cartItems": [
+            {
+                "amount": 2,
+                "cartID": "7#FF5733",
+                "company": "Homestead",
+                "image": "https://images.pexels.com/photos/1034584/pexels-photo-1034584.jpeg?auto=compress&cs=tinysrgb&w=1600",
+                "price": "12999",
+                "productColor": "#FF5733",
+                "productID": 7,
+                "title": "comfy bed"
+            }
+        ],
+        "chargeTotal": 123140.1,
+        "name": "james ",
+        "numItemsInCart": 9,
+        "orderTotal": "$1,231.40"
+    }
+}
+
+### GET ALL ORDERS (auth)
+GET /api/orders HTTP/1.1
+Host: strapi-store-server.onrender.com

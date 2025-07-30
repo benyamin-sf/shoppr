@@ -1,0 +1,20 @@
+### REGISTER USER (public)
+POST /api/auth/local/register HTTP/1.1
+Host: strapi-store-server.onrender.com
+Content-Type: application/json
+
+{
+    "username":"james smith",
+    "email":"james@gmail.com",
+    "password":"secret"
+}
+
+### LOGIN USER (public)
+POST /api/auth/local HTTP/1.1
+Host: strapi-store-server.onrender.com
+Content-Type: application/json
+
+{
+    "identifier":"james@gmail.com",
+    "password":"secret"
+}
