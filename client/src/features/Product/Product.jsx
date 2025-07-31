@@ -47,13 +47,14 @@ export default function Product() {
       {/* PRODUCT */}
       <div className='relative mt-6 grid gap-y-8 lg:grid-cols-2 lg:gap-x-16'>
         {/* IMAGE */}
-        <div className='w-full h-96 mt-18 ml-8 before:content-[""] before:absolute before:top-10 before:left-0 before:w-[512px] before:h-96 before:rounded-lg before:border before:border-accent before:z-[-1]'>
+        <div className='w-full h-96 rounded-lg overflow-hidden shadow-[-0.25rem_-0.25rem_0.85rem] shadow-accent mt-16 ml-6 before:content-[""] before:absolute before:top-10 before:left-0 before:w-[512px] before:h-96 before:rounded-lg before:border-4 before:border-accent before:z-[-1]'>
           <img
             src={image}
             alt={title}
             className='w-full h-full object-cover rounded-lg'
           />
         </div>
+
         {/* INFO */}
         <div className='px-4 sm:px-6 md:px-8 lg:px-10'>
           <h1 className='text-3xl font-bold capitalize'>{title}</h1>
@@ -62,7 +63,7 @@ export default function Product() {
             <br />
             <span className='ml-2 text-base-content'>{company}</span>
           </h4>
-          <p className='bg-accent absolute top-16 right-0 text-xl font-mono tracking-wider px-4 py-2 rounded-box text-accent-content'>
+          <p className='bg-accent absolute top-16 right-0 text-xl font-mono tracking-wider px-3 py-1 rounded-box text-accent-content'>
             {formattedPrice}
           </p>
           <p className='mt-4 leading-8'>{description}</p>
@@ -79,7 +80,7 @@ export default function Product() {
                       type='button'
                       className={`badge w-6 h-6 mr-2 cursor-pointer rounded-full ${
                         color === selectedColor
-                          ? 'border-2 border-secondary'
+                          ? 'border-2 border-accent'
                           : undefined
                       }`}
                       style={{ backgroundColor: color }}

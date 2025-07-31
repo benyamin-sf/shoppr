@@ -59,7 +59,7 @@ export default function Register() {
         </button>
         <p className='text-center'>
           Already a member?
-          <Link to='/register' className='ml-1 link link-hover link-primary'>
+          <Link to='/login' className='ml-1 link link-hover link-accent'>
             Login
           </Link>
         </p>

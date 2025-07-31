@@ -12,7 +12,7 @@ export default function FormInput({
       <input
         type={type}
         name={name}
-        className='input'
+        className='input focus:outline-accent'
         placeholder={placeholder}
         defaultValue={defaultValue}
         required={required}

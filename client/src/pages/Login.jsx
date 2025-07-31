@@ -36,7 +36,7 @@ export default function Login() {
         </button>
         <p className='text-center'>
           Not a member yet?
-          <Link to='/register' className='ml-1 link link-hover link-primary'>
+          <Link to='/register' className='ml-1 link link-hover link-accent'>
             Join us now!
           </Link>
         </p>

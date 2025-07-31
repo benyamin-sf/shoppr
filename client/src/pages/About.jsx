@@ -1,12 +1,12 @@
 export default function About() {
   return (
     <>
-      <h1 className='text-4xl font-bold leading-16 tracking-tight text-center mt-16 sm:text-6xl'>
+      <h1 className='text-4xl font-bold leading-20 text-center mt-6 sm:text-6xl tracking-wider'>
         What our shoppers asks,
         <br />
-        <span className='stats bg-primary shadow'>
+        <span className='stats bg-accent shadow'>
           <span className='stat'>
-            <span className='stat-title text-primary-content text-4xl font-bold tracking-widest uppercase'>
+            <span className='stat-title text-accent-content text-4xl font-bold tracking-widest uppercase'>
               Shoppr
             </span>
           </span>

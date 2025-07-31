@@ -2,7 +2,7 @@ import fetchProduct from '../../api/products/fetchSingleProduct';
 
 export const productQuery = (id) => {
   return {
-    queryKey: ['product'],
+    queryKey: ['product', id],
     queryFn: () => fetchProduct(id),
   };
 };

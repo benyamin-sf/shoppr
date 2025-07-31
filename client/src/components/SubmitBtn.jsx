@@ -4,7 +4,7 @@ export default function SubmitBtn({ formState, text, submitText }) {
   return (
     <button
       type='submit'
-      className={`btn btn-primary btn-block`}
+      className='btn btn-block btn-accent'
       disabled={isFormSubmitting}
     >
       {isFormSubmitting ? (
