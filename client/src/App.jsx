@@ -1,4 +1,6 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 
 // PAGES
 import {
@@ -9,16 +11,24 @@ import {
   HomeLayout,
   Login,
   Orders,
-  Product,
-  Products,
   Register,
 } from './pages';
 
 // FEATURES
 import { Landing, LandingFallback, landingLoader } from './features/Landing';
+import { Product, ProductFallback, productLoader } from './features/Product';
 
 // COMPONENTS
 import { ErrorElement } from './components';
+
+// setting stale-time for queries to 15 mins
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      staleTime: 15 * 60 * 1000,
+    },
+  },
+});
 
 const router = createBrowserRouter([
   {
@@ -30,7 +40,7 @@ const router = createBrowserRouter([
         index: true,
         element: <Landing />,
         hydrateFallbackElement: <LandingFallback />,
-        loader: landingLoader,
+        loader: landingLoader(queryClient),
         errorElement: <ErrorElement />,
       },
       {
@@ -45,13 +55,16 @@ const router = createBrowserRouter([
         path: 'checkout',
         element: <Checkout />,
       },
+      // {
+      //   path: 'products',
+      //   element: <Products />,
+      // },
       {
-        path: 'products',
-        element: <Products />,
-      },
-      {
-        path: 'products/:id',
+        path: 'products/:productId',
         element: <Product />,
+        hydrateFallbackElement: <ProductFallback />,
+        loader: productLoader(queryClient),
+        errorElement: <ErrorElement />,
       },
       {
         path: 'orders',
@@ -72,5 +85,10 @@ const router = createBrowserRouter([
 ]);
 
 export default function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <QueryClientProvider client={queryClient}>
+      <RouterProvider router={router} />
+      <ReactQueryDevtools initialIsOpen={false} />
+    </QueryClientProvider>
+  );
 }

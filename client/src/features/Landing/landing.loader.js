@@ -1,6 +1,17 @@
 import fetchFeatured from '../../api/products/fetchFeatured';
 
-export default async function landingLoader() {
-  const featuredProducts = await fetchFeatured();
-  return featuredProducts;
-}
+export const featuredQuery = () => {
+  return {
+    queryKey: ['featuredProducts'],
+    queryFn: fetchFeatured,
+  };
+};
+
+export const landingLoader = (queryClient) => async () => {
+  try {
+    return await queryClient.ensureQueryData(featuredQuery());
+  } catch (e) {
+    console.error(e);
+    return null;
+  }
+};

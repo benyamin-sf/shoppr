@@ -35,7 +35,7 @@ export default function Navbar() {
           {/* LOGO */}
           <NavLink
             to='/'
-            className='hidden w-12 h-12 lg:flex btn btn-primary text-3xl items-center'
+            className='hidden w-12 h-12 lg:flex btn btn-accent text-3xl items-center'
           >
             S
           </NavLink>
@@ -46,14 +46,14 @@ export default function Navbar() {
               <FaBarsStaggered className='h-6 w-6' />
             </label>
 
-            <ul className='menu menu-sm dropdown-content mt-8 z-[1] p-2 shadow bg-base-200 rounded-box w-48 space-y-1'>
+            <ul className='menu menu-md dropdown-content mt-8 z-[1] p-2 shadow bg-base-200 rounded-box w-48 space-y-1.5'>
               <NavLinks />
             </ul>
           </div>
         </div>
 
         <div className='navbar-center hidden lg:flex'>
-          <ul className='menu menu-horizontal space-x-1'>
+          <ul className='menu menu-horizontal space-x-1.5'>
             <NavLinks />
           </ul>
         </div>
@@ -71,7 +71,7 @@ export default function Navbar() {
           <NavLink to='/cart' className='btn btn-ghost btn-circle btn-md ml-4'>
             <div className='indicator'>
               <BsCart className='w-6 h-6' />
-              <span className='badge badge-sm badge-primary indicator-item'>
+              <span className='badge badge-sm badge-accent rounded-box indicator-item'>
                 3
               </span>
             </div>

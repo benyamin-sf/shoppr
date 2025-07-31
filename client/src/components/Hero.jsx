@@ -21,19 +21,19 @@ export default function Hero() {
           your speed, your shop.
         </p>
         <div className='mt-10'>
-          <Link to='/products' className='btn btn-primary uppercase'>
+          <Link to='/products' className='btn btn-accent uppercase'>
             See our products
           </Link>
         </div>
       </div>
-      <div className='hidden h-[28rem] lg:carousel carousel-center p-4 space-x-4 bg-neutral rounded-box'>
+      <div className='hidden h-[28rem] lg:carousel carousel-center p-4 space-x-4 bg-accent rounded-lg'>
         {carouselImages.map((img) => {
           return (
             <div key={img} className='carousel-item'>
               <img
                 src={img}
                 alt='carousel image'
-                className='rounded-box h-full w-80 object-cover'
+                className='rounded-lg h-full w-80 object-cover'
               />
             </div>
           );

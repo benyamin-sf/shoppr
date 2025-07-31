@@ -1,15 +1,10 @@
-import { useLoaderData } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
 
 import { FeaturedProducts, Hero } from '../../components';
-import fetchFeatured from '../../api/products/fetchFeatured';
+import { featuredQuery } from './landing.loader';
 
 export default function Landing() {
-  const { data } = useQuery({
-    queryKey: ['featuredLanding'],
-    queryFn: fetchFeatured,
-    initialData: useLoaderData(),
-  });
+  const { data } = useQuery(featuredQuery());
 
   return (
     <>

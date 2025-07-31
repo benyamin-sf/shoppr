@@ -5,6 +5,4 @@ export { default as Error } from './Error';
 export { default as HomeLayout } from './HomeLayout';
 export { default as Login } from './Login';
 export { default as Orders } from './Orders';
-export { default as Product } from './Product';
-export { default as Products } from './Products';
 export { default as Register } from './Register';
