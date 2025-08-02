@@ -67,7 +67,7 @@ export default function Product() {
             {formattedPrice}
           </p>
           <p className='mt-4 leading-8'>{description}</p>
-          <div className='mt-8 flex flex-col gap-y-6'>
+          <div className='mt-8 space-y-5'>
             {/* COLORS */}
             <ul className='flex gap-x-1 items-center px-3 py-1.5 border border-accent rounded-box'>
               <h4 className='text-sm font-medium tracking-wider text-neutral-400 mr-7'>

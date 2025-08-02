@@ -1,5 +1,5 @@
 import SectionTitle from './SectionTitle';
-import ProductsGrid from './ProductsGrid';
+import { ProductsGrid } from '../features/Products/ProductsGrid';
 
 export default function FeaturedProducts({ data }) {
   return (

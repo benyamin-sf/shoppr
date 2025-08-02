@@ -1,16 +1,12 @@
 export default function About() {
   return (
     <>
-      <h1 className='text-4xl font-bold leading-20 text-center mt-6 sm:text-6xl tracking-wider'>
-        What our shoppers asks,
+      <h1 className='font-bold leading-20 text-center mt-4 2xl:mt-8 text-3xl sm:text-3xl md:text-4xl lg:text-5xl tracking-wider'>
+        Whatever <span className='text-accent'>Shoppers</span> asks,
         <br />
-        <span className='stats bg-accent shadow'>
-          <span className='stat'>
-            <span className='stat-title text-accent-content text-4xl font-bold tracking-widest uppercase'>
-              Shoppr
-            </span>
-          </span>
-        </span>{' '}
+        <span className='bg-accent shadow leading-0 rounded-box text-accent-content uppercase text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-widest py-2 px-4 mr-4'>
+          Shoppr
+        </span>
         provides.
       </h1>
       <p className='mt-10 text-lg leading-8 max-w-2xl mx-auto text-center'>

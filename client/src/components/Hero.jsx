@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
 
-import hero1 from '../assets/hero1.webp';
-import hero2 from '../assets/hero2.webp';
-import hero3 from '../assets/hero3.webp';
-import hero4 from '../assets/hero4.webp';
+import hero1 from '../assets/hero/hero1.webp';
+import hero2 from '../assets/hero/hero2.webp';
+import hero3 from '../assets/hero/hero3.webp';
+import hero4 from '../assets/hero/hero4.webp';
 
 const carouselImages = [hero1, hero2, hero3, hero4];
 
@@ -14,7 +14,7 @@ export default function Hero() {
         <h1 className='max-w-2xl text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl'>
           Shoppr shapes the way you shop
         </h1>
-        <p className='mt-8 max-w-xl text-lg leading-8'>
+        <p className='mt-8 max-w-xl text-lg leading-8 text-neutral-500'>
           Discover a smarter, smoother, and more secure way to shop. With
           personalized experiences, seamless checkout, and handpicked quality —
           Shoppr is built to make every purchase feel effortless. Your style,

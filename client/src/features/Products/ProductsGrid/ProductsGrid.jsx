@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-import formatPrice from '../../../shared/utils/formatPrice';
+import formatPrice from '../../../../../shared/utils/formatPrice';
 
 export default function ProductsGrid({ data }) {
   return (

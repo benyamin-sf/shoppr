@@ -9,22 +9,29 @@ import {
   Checkout,
   Error,
   HomeLayout,
+  Landing,
+  LandingFallback,
   Login,
   Orders,
   Register,
 } from './pages';
 
-// FEATURES
-import { Landing, LandingFallback, landingLoader } from './features/Landing';
+// FEATURES (and their related loaders and actions)
+import {
+  Products,
+  ProductsFallback,
+  featuredProductsLoader,
+  productsLoader,
+} from './features/Products';
 import { Product, ProductFallback, productLoader } from './features/Product';
 
 // COMPONENTS
 import { ErrorElement } from './components';
 
-// setting stale-time for queries to 15 mins
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
+      // setting stale-time for queries to 15 mins
       staleTime: 15 * 60 * 1000,
     },
   },
@@ -40,7 +47,7 @@ const router = createBrowserRouter([
         index: true,
         element: <Landing />,
         hydrateFallbackElement: <LandingFallback />,
-        loader: landingLoader(queryClient),
+        loader: featuredProductsLoader(queryClient),
         errorElement: <ErrorElement />,
       },
       {
@@ -55,10 +62,13 @@ const router = createBrowserRouter([
         path: 'checkout',
         element: <Checkout />,
       },
-      // {
-      //   path: 'products',
-      //   element: <Products />,
-      // },
+      {
+        path: 'products',
+        element: <Products />,
+        hydrateFallbackElement: <ProductsFallback />,
+        loader: productsLoader(queryClient),
+        errorElement: <ErrorElement />,
+      },
       {
         path: 'products/:productId',
         element: <Product />,
